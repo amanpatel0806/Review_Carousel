@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body
+    {
+    background-color:rgb(181, 130, 11);
+    }
+    h1
+    {
+        height: 15vh;
+        width: 49vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+        -ms-flex-align: center;
+        align-content: center;
+        margin: auto;
+        font-family: fantasy;
+        font-size: 1.5cm;
+    }
+    hr
+    {
+        width: 30vh;
+        height: 1vh;
+        background-color: rgb(25, 232, 243);
+    }
+    .container
+    {
+        width: 50vw;
+        height: 65vh;
+        display: flexbox;
+        border-radius: 5px;
+        box-shadow: 7px 7px 5px black;
+        background-color: aquamarine;
+        margin: auto;
+        margin-top: 8%;
+        align-content: center;
+        justify-content: center;
+        overflow: scroll;
+    }
+    #photos
+    {
+        width: 7vw;
+        height: 12vh;
+        margin: auto;
+        margin-top: 2%;
+        border-radius: 50px;
+    }
+    #dp
+    {
+        margin: auto;
+        margin-top: 2%;
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        
+    }
+    #name
+    {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        font-family: Arial, Helvetica, sans-serif;
+    }
+    #job
+    {
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        font-family: 'Times New Roman', Times, serif;
+        color:chocolate;
+    }
+    #review
+    {
+        margin: auto;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+        width: 40vw;
+        height: 22vh;
+        overflow: scroll;
+    }
+    button{
+        cursor:pointer;
+    }
+    
+    #left
+    {
+        font-size: 0.75cm;
+        border: none;
+        background-color: aquamarine;
+        height: 5vh;
+        width: 5vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        margin: 2% 2% 1% 37%;
+        
+    }
+    #right
+    {
+        font-size: 0.75cm;
+        border: none;
+        background-color: aquamarine;
+        height: 5vh;
+        width: 5vw;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+    #surprise
+    {
+        display:flex;
+        margin-left: 43%;
+        border-radius: 10px;
+        background-color:rgb(0, 174, 255);
+        
+    }
+</style>
+
+<body>
+    <h1>Our Reviews</h1>
+    <hr>
+    <div class="container">
+        <div id="dp">
+            <img id="photos" src="https://marketplace.canva.com/EAFHfL_zPBk/1/0/1600w/canva-yellow-inspiration-modern-instagram-profile-picture-kpZhUIzCx_w.jpg" alt="">
+        </div>    
+        <h2 id="name">Rahul Verma</h2>
+        <h4 id="job">App Developer</h4>
+        <p id="review">Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, officia facere consequuntur modi maxime minus ipsam eum repudiandae perferendis, animi et id atque voluptate quo. Ratione magni maxime error cumque aliquam iusto, minima accusamus, debitis suscipit aperiam fuga nemo, ex dolorum at atque! Molestias!</p>
+        <button id="left"><</button>
+        <button id="right">></button>
+        <button id="surprise">Random</button>
+        
+    </div>
+</body>
+
+<script>
+    let reviewList = [
+        {
+            id:0,
+            name:"Rahul Verma",
+            job:"App Developer",
+            img:"https://marketplace.canva.com/EAFHfL_zPBk/1/0/1600w/canva-yellow-inspiration-modern-instagram-profile-picture-kpZhUIzCx_w.jpg",
+            review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Molestias, officia facere consequuntur modi maxime minus ipsam eum repudiandae perferendis, animi et id atque voluptate quo. Ratione magni maxime error cumque aliquam iusto, minima accusamus, debitis suscipit aperiam fuga nemo, ex dolorum at atque! Molestias!"
+        },
+        {
+            id:1,
+            name:"Aman Patel",
+            job:"Front End Developer",
+            img:"https://marketplace.canva.com/EAFSZhFumYM/1/0/400w/canva-dark-red-neon-futuristic-instagram-profile-picture-_8SQf-t0fo0.jpg",
+            review:"Lorem ipsum dolor sit amet consectetur adipisicing elit. Architecto facere voluptas voluptatem accusamus odio consequatur dolorem voluptatibus inventore nisi suscipit sequi, tempore debitis minima voluptatum a nesciunt est reprehenderit quos dolore, quam error accusantium amet? Odit aliquid repudiandae dolorem odio beatae quasi, alias rem eveniet?",
+        },
+        {
+            id:2,
+            name:"Kahaan Choksi",
+            job:"Back End Developer",
+            img:"https://marketplace.canva.com/EAFihNgAXWE/1/0/400w/canva-purple-neon-youtube-profile-picture-hbJwzEx7CHk.jpg",
+            review:"Lorem, ipsum dolor sit amet consectetur adipisicing elit. Animi neque ipsa exercitationem voluptas, molestiae similique necessitatibus, alias nostrum, voluptatibus magni reiciendis eligendi commodi. Eligendi cumque deserunt alias eum impedit ea vitae atque necessitatibus corporis labore!",
+        },
+        {
+            id:3,
+            name:"Ritik Sharma",
+            job:"Full Stack Developer",
+            img:"https://marketplace.canva.com/EAFbjTCEB8o/1/0/1600w/canva-black-geometric-depop-profile-picture-RrK3jakmEDg.jpg",
+            review:"Lorem ipsum dolor sit, amet consectetur adipisicing elit. Excepturi nulla corrupti enim quidem quas, iusto, beatae atque libero est repudiandae fugiat sit voluptatum labore placeat eius natus ducimus aut sequi? Hic fuga quas quam possimus mollitia aut quod cupiditate molestiae enim delectus. Voluptatem eveniet minus vitae officiis unde?"
+        }
+    ];
+    let id = 0;
+    let next = document.getElementById("right");
+    let back = document.getElementById("left");
+    let name = document.getElementById("name");
+    let job = document.getElementById("job");
+    let image = document.getElementById("photos");
+    let review = document.getElementById("review");
+    let random = document.getElementById("surprise");
+
+    next.addEventListener('click',function f(){
+        if(id==3)
+        {
+            id = -1;
+        }
+        else
+        {
+            id++;
+            name.innerHTML = reviewList[id].name;
+            image.src = reviewList[id].img;
+            job.innerHTML = reviewList[id].job;
+            review.innerHTML = reviewList[id].review;
+            
+        }
+        
+    });
+    back.addEventListener('click',function f1(){
+        if(id==0)
+        {
+            id = 4;
+        }
+        else
+        {
+            id--;
+            name.innerHTML = reviewList[id].name;
+            image.src = reviewList[id].img;
+            job.innerHTML = reviewList[id].job;
+            review.innerHTML = reviewList[id].review;
+            
+        }
+    });
+    random.addEventListener('click',function f3(){
+        id = Math.floor(5-(5*Math.random()));
+        name.innerHTML = reviewList[id].name;
+        image.src = reviewList[id].img;
+        job.innerHTML = reviewList[id].job;
+        review.innerHTML = reviewList[id].review;
+    });
+
+</script>
+</html>
